@@ -16,9 +16,13 @@ router.get('/api/reporting/v1/dashboard/widget/5e17938422ccee0013c0b1eb',async(r
 });
 
  router.get('/',async(req,res) => {
-   console.log("two!");
    res.send('<html><head></head><body>Hello OneTrust!</body></html>');
  });
 
+ router.use('/dist',express.static(__dirname + '/dist'));
 
+ router.get('/dist/login/*',async(req,res) => {
+    res.sendFile(__dirname + '/dist/login/login.html');
+ });
+ 
 module.exports = router;
