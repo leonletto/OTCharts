@@ -1,4 +1,8 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/03fb28c2-cca0-4c3c-9983-47f7adb97d9f/resourceGroups/AirWatch/providers/Microsoft.Web/sites/OTMicrosoftOfficeAddin",
-    "appService.deploySubpath": ""
+    "appService.deploySubpath": "",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/03fb28c2-cca0-4c3c-9983-47f7adb97d9f/resourceGroups/ZaraDana/providers/Microsoft.Web/sites/OTCharts"
 }
