@@ -146,5 +146,79 @@ module.exports.data =
     "lastModifiedBy": "3e11339d-2e5c-4b64-96b0-982dc03780f5",
     "createDT": "2020-01-09T20:56:36.135+0000",
     "frequency": null
+},
+{
+    "data": [
+        {
+            "id": "Australia",
+            "labelKey": "Australia",
+            "value": "1",
+            "filter": null
+        },
+        {
+            "id": "France",
+            "labelKey": "France",
+            "value": "1",
+            "filter": null
+        },
+        {
+            "id": "Germany",
+            "labelKey": "Germany",
+            "value": "1",
+            "filter": null
+        },
+        {
+            "id": "United Kingdom",
+            "labelKey": "UnitedKingdom",
+            "value": "2",
+            "filter": null
+        },
+        {
+            "id": "United States",
+            "labelKey": "UnitedStates",
+            "value": "9",
+            "filter": null
+        }
+    ],
+    "datasets": null,
+    "filters": [
+        {
+            "empty": true
+        }
+    ],
+    "nameKey": null,
+    "filter": null,
+    "version": 0,
+    "type": 10,
+    "name": "Vendors By Region",
+    "id": "5e1792d322ccee0013c0b1ea",
+    "idBasedFilter": false,
+    "groupBy": {
+        "reportableType": {
+            "entityType": "INVENTORY",
+            "reportSubType": "50"
+        },
+        "attributeKey": "location",
+        "attributeEntityType": "dynamicAttributes"
+    },
+    "secondaryGroupBy": null,
+    "showOtherGroup": true,
+    "aggregate": {
+        "function": "COUNT",
+        "field": {
+            "value": null,
+            "valueKey": null
+        }
+    },
+    "primaryReportableType": {
+        "entityType": "INVENTORY",
+        "reportSubType": "50"
+    },
+    "new": false,
+    "timeline": null,
+    "lastModifiedDate": "2020-01-09T20:53:47.682+0000",
+    "lastModifiedBy": "3e11339d-2e5c-4b64-96b0-982dc03780f5",
+    "frequency": null,
+    "createDT": "2020-01-09T20:53:39.085+0000"
 }
 ]
