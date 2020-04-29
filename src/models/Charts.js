@@ -78,39 +78,27 @@ module.exports.data =
             "labelKey": "Under Review",
             "data": [
                 {
-                    "id": "OneTrust",
-                    "labelKey": "OneTrust",
-                    "value": "3",
-                    "filter": null
-                },
-                {
-                    "id": "HR",
-                    "labelKey": "HR",
-                    "value": "1",
-                    "filter": null
-                },
-                {
-                    "id": "Marketing",
-                    "labelKey": "Marketing",
-                    "value": "0",
-                    "filter": null
-                },
-                {
-                    "id": "Vyond",
-                    "labelKey": "Vyond",
-                    "value": "1",
-                    "filter": null
-                },
-                {
-                    "id": "Corporate",
-                    "labelKey": "Corporate",
+                    "id": "Quentin Bourne",
+                    "labelKey": "Quentin Bourne",
                     "value": "2",
                     "filter": null
                 },
                 {
-                    "id": "IT",
-                    "labelKey": "IT",
+                    "id": "Jeanne Lee",
+                    "labelKey": "Jeanne Lee",
+                    "value": "2",
+                    "filter": null
+                },
+                {
+                    "id": "David Franc",
+                    "labelKey": "David Franc",
                     "value": "1",
+                    "filter": null
+                },
+                {
+                    "id": "Catherine Williams",
+                    "labelKey": "Catherine Williams",
+                    "value": "3",
                     "filter": null
                 }
             ]
@@ -120,39 +108,27 @@ module.exports.data =
             "labelKey": "Not Started",
             "data": [
                 {
-                    "id": "OneTrust",
-                    "labelKey": "OneTrust",
+                    "id": "Quentin Bourne",
+                    "labelKey": "Quentin Bourne",
                     "value": "0",
                     "filter": null
                 },
                 {
-                    "id": "HR",
-                    "labelKey": "HR",
+                    "id": "Jeanne Lee",
+                    "labelKey": "Jeanne Lee",
+                    "value": "1",
+                    "filter": null
+                },
+                {
+                    "id": "David Franc",
+                    "labelKey": "David Franc",
                     "value": "0",
                     "filter": null
                 },
                 {
-                    "id": "Marketing",
-                    "labelKey": "Marketing",
-                    "value": "1",
-                    "filter": null
-                },
-                {
-                    "id": "Vyond",
-                    "labelKey": "Vyond",
-                    "value": "1",
-                    "filter": null
-                },
-                {
-                    "id": "Corporate",
-                    "labelKey": "Corporate",
-                    "value": "1",
-                    "filter": null
-                },
-                {
-                    "id": "IT",
-                    "labelKey": "IT",
-                    "value": "0",
+                    "id": "Catherine Williams",
+                    "labelKey": "Catherine Williams",
+                    "value": "2",
                     "filter": null
                 }
             ]
@@ -162,39 +138,27 @@ module.exports.data =
             "labelKey": "Completed",
             "data": [
                 {
-                    "id": "OneTrust",
-                    "labelKey": "OneTrust",
-                    "value": "1",
+                    "id": "Quentin Bourne",
+                    "labelKey": "Quentin Bourne",
+                    "value": "3",
                     "filter": null
                 },
                 {
-                    "id": "HR",
-                    "labelKey": "HR",
-                    "value": "1",
-                    "filter": null
-                },
-                {
-                    "id": "Marketing",
-                    "labelKey": "Marketing",
+                    "id": "Jeanne Lee",
+                    "labelKey": "Jeanne Lee",
                     "value": "2",
                     "filter": null
                 },
                 {
-                    "id": "Vyond",
-                    "labelKey": "Vyond",
+                    "id": "David Franc",
+                    "labelKey": "David Franc",
                     "value": "1",
                     "filter": null
                 },
                 {
-                    "id": "Corporate",
-                    "labelKey": "Corporate",
-                    "value": "2",
-                    "filter": null
-                },
-                {
-                    "id": "IT",
-                    "labelKey": "IT",
-                    "value": "2",
+                    "id": "Catherine Williams",
+                    "labelKey": "Catherine Williams",
+                    "value": "3",
                     "filter": null
                 }
             ]
@@ -204,75 +168,56 @@ module.exports.data =
             "labelKey": "In Progress",
             "data": [
                 {
-                    "id": "OneTrust",
-                    "labelKey": "OneTrust",
+                    "id": "Quentin Bourne",
+                    "labelKey": "Quentin Bourne",
+                    "value": "2",
+                    "filter": null
+                },
+                {
+                    "id": "Jeanne Lee",
+                    "labelKey": "Jeanne Lee",
+                    "value": "3",
+                    "filter": null
+                },
+                {
+                    "id": "David Franc",
+                    "labelKey": "David Franc",
+                    "value": "3",
+                    "filter": null
+                },
+                {
+                    "id": "Catherine Williams",
+                    "labelKey": "Catherine Williams",
                     "value": "4",
-                    "filter": null
-                },
-                {
-                    "id": "HR",
-                    "labelKey": "HR",
-                    "value": "1",
-                    "filter": null
-                },
-                {
-                    "id": "Marketing",
-                    "labelKey": "Marketing",
-                    "value": "1",
-                    "filter": null
-                },
-                {
-                    "id": "Vyond",
-                    "labelKey": "Vyond",
-                    "value": "1",
-                    "filter": null
-                },
-                {
-                    "id": "Corporate",
-                    "labelKey": "Corporate",
-                    "value": "4",
-                    "filter": null
-                },
-                {
-                    "id": "IT",
-                    "labelKey": "IT",
-                    "value": "1",
                     "filter": null
                 }
             ]
         }
     ],
-    "nameKey": null,
     "filters": [
         {
             "empty": true
         }
     ],
+    "nameKey": null,
     "filter": null,
     "type": 60,
     "version": 0,
-    "name": "Assessment Status Across Business",
-    "id": "5ea8f013572a5500192d6283",
-    "showOtherGroup": false,
-    "aggregate": {
-        "function": "COUNT",
-        "field": {
-            "value": null,
-            "valueKey": null
-        }
-    },
-    "idBasedFilter": false,
+    "lastModifiedDate": "2020-04-29T07:39:20.682+0000",
+    "lastModifiedBy": "286c8443-5d9a-4da5-99cc-c67e5b034ec6",
     "new": false,
+    "id": "5ea92e0cafd5c8000d398382",
     "primaryReportableType": {
         "entityType": "INVENTORY",
         "reportSubType": "50"
     },
+    "idBasedFilter": false,
     "groupBy": {
         "reportableType": {
             "entityType": "INVENTORY",
             "reportSubType": "50"
         },
-        "attributeKey": "organization",
+        "attributeKey": "owner",
         "attributeEntityType": "dynamicAttributes"
     },
     "secondaryGroupBy": {
@@ -283,11 +228,18 @@ module.exports.data =
         "attributeKey": "state",
         "attributeEntityType": "attribute"
     },
+    "showOtherGroup": true,
+    "aggregate": {
+        "function": "COUNT",
+        "field": {
+            "value": null,
+            "valueKey": null
+        }
+    },
     "timeline": null,
-    "lastModifiedDate": "2020-04-29T03:22:00.786+0000",
-    "lastModifiedBy": "286c8443-5d9a-4da5-99cc-c67e5b034ec6",
-    "createDT": "2020-04-29T03:10:11.939+0000",
-    "frequency": null
+    "frequency": null,
+    "createDT": "2020-04-29T07:34:36.085+0000",
+    "name": "Assessment Status Across Business"
 },
 
 {

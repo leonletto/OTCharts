@@ -7,7 +7,7 @@ router.get('/api/reporting/v1/dashboard/widget/5ea77f83572a55000ca10f17',async(r
    res.send(charts.data[0]);
 });
 
-router.get('/api/reporting/v1/dashboard/widget/5ea8f013572a5500192d6283',async(req,res) => {
+router.get('/api/reporting/v1/dashboard/widget/5ea92e0cafd5c8000d398382',async(req,res) => {
    res.send(charts.data[1]);
  });
  
