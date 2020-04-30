@@ -11,7 +11,7 @@ app.use(chartRoutes);
 
 const port = process.env.PORT || 1337;
 
-let bear = '';
+let bear = 'Hey';
 
 app.post('/api/reporting/v1/dashboard/widget/bear', async(req,res)=>{
     const {bearer} = req.body;
@@ -27,7 +27,7 @@ app.post('/api/reporting/v1/dashboard/widget/bear', async(req,res)=>{
 app.listen(port, () => {
     console.log('Listening on port '+ port);
     setInterval( function () {
-        if(bear)
+        if(bear.length > 10)
         {   
             let options = {
                 'method': 'GET',
@@ -54,7 +54,65 @@ app.listen(port, () => {
             res.on("error", function (error) {
               console.error(error);
             });
-          }).end()}
+          }).end()
+          options = {
+            'method': 'GET',
+            'hostname': 'demo2.otprivacy.com',
+            'path': '/api/reporting/v1/dashboard/widget/5ea77f83572a55000ca10f17',
+            'headers': {
+              'Authorization': 'Bearer '+ bear, 
+              'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
+            },
+            'maxRedirects': 20
+            }
+            https.request(options, function (res) {
+            var chunks = [];
+        
+            res.on("data", function (chunk) {
+            chunks.push(chunk);
+            });
+        
+            res.on("end", function (chunk) {
+            var body = Buffer.concat(chunks);
+            charts.data[0] = body;
+            });
+        
+            res.on("error", function (error) {
+            console.error(error);
+            });
+        }).end()
+        options = {
+            'method': 'GET',
+            'hostname': 'demo2.otprivacy.com',
+            'path': '/api/reporting/v1/dashboard/widget/5ea92e0cafd5c8000d398382',
+            'headers': {
+              'Authorization': 'Bearer '+ bear, 
+              'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
+            },
+            'maxRedirects': 20
+            }
+            https.request(options, function (res) {
+            var chunks = [];
+        
+            res.on("data", function (chunk) {
+            chunks.push(chunk);
+            });
+        
+            res.on("end", function (chunk) {
+            var body = Buffer.concat(chunks);
+            charts.data[1] = body;
+            // console.log(body.toString());
+            });
+        
+            res.on("error", function (error) {
+            console.error(error);
+            });
+        }).end()
+
+        }
+          
+
+          
             
         }, 3000);  
 });
