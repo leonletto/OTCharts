@@ -15,7 +15,7 @@ router.get('/api/reporting/v1/dashboard/widget/5ea77f83572a55000ca10f18',async(r
   res.send(charts.data[2]);
 });
 
-router.get('/api/reporting/v1/dashboard/widget/5ea71f83572a55000ca10f18',async(req,res) => {
+router.get('/api/reporting/v1/dashboard/widget/5ea71f83572a55000ca10f18',async(req,res) => { //fake
   res.send(charts.data[3]);
 });
 
@@ -23,10 +23,4 @@ router.get('/api/reporting/v1/dashboard/widget/5ea71f83572a55000ca10f18',async(r
    res.send('<html><head></head><body>Hello OneTrust!</body></html>');
  });
 
-//  router.use('/dist',express.static(__dirname + '/dist'));
-
-//  router.get('/dist/login/*',async(req,res) => {
-//     res.sendFile(__dirname + '/dist/login/login.html');
-//  });
- 
 module.exports = router;
