@@ -29,7 +29,6 @@ app.listen(port, () => {
     setInterval( function () {
         if(bear)
         {   
-            console.log(bear);
             let options = {
                 'method': 'GET',
                 'hostname': 'demo2.otprivacy.com',
@@ -50,7 +49,6 @@ app.listen(port, () => {
             res.on("end", function (chunk) {
               var body = Buffer.concat(chunks);
               charts.data[2] = body;
-              console.log(body.toString());
             });
           
             res.on("error", function (error) {
