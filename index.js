@@ -17,102 +17,130 @@ app.post('/api/reporting/v1/dashboard/widget/bear', async(req,res)=>{
     const {bearer} = req.body;
     if(!bearer){
         res.status(422).send({error:'You must provide a bear'});
-    }else{
+    } else{
       bear = bearer;
       res.status(200).send("Ok");
     }   
   });
   
+app.get('/api/reporting/v1/dashboard/widget/:id', async(req, res0) => {
+    route = req.params.id;
+    if(bear.length > 10)
+    {   
+        let options = {
+            'method': 'GET',
+            'hostname': 'demo2.otprivacy.com',
+            'path': '/api/reporting/v1/dashboard/widget/'+route,
+            'headers': {
+              'Authorization': 'Bearer '+ bear, 
+              'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
+            },
+            'maxRedirects': 20
+        }
+        https.request(options, function (res) {
+        var chunks = [];
+      
+        res.on("data", function (chunk) {
+          chunks.push(chunk);
+        });
+      
+        res.on("end", function (chunk) {
+          var body = Buffer.concat(chunks);
+          res0.send(body);
+        });
+      
+        res.on("error", function (error) {
+          console.error(error);
+        });
+      }).end()
+    }
+ });
+
 
 app.listen(port, () => {
     console.log('Listening on port '+ port);
-    setInterval( function () {
-        if(bear.length > 10)
-        {   
-            let options = {
-                'method': 'GET',
-                'hostname': 'demo2.otprivacy.com',
-                'path': '/api/reporting/v1/dashboard/widget/5ea77f83572a55000ca10f18',
-                'headers': {
-                  'Authorization': 'Bearer '+ bear, 
-                  'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
-                },
-                'maxRedirects': 20
-            }
-            https.request(options, function (res) {
-            var chunks = [];
+    // setInterval( function () {
+    //     if(bear.length > 10)
+    //     {   
+    //     let options = {
+    //             'method': 'GET',
+    //             'hostname': 'demo2.otprivacy.com',
+    //             'path': '/api/reporting/v1/dashboard/widget/5ea77f83572a55000ca10f18',
+    //             'headers': {
+    //               'Authorization': 'Bearer '+ bear, 
+    //               'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
+    //             },
+    //             'maxRedirects': 20
+    //         }
+    //         https.request(options, function (res) {
+    //         var chunks = [];
           
-            res.on("data", function (chunk) {
-              chunks.push(chunk);
-            });
+    //         res.on("data", function (chunk) {
+    //           chunks.push(chunk);
+    //         });
           
-            res.on("end", function (chunk) {
-              var body = Buffer.concat(chunks);
-              charts.data[2] = body;
-            });
+    //         res.on("end", function (chunk) {
+    //           var body = Buffer.concat(chunks);
+    //           charts.data[2] = body;
+    //         });
           
-            res.on("error", function (error) {
-              console.error(error);
-            });
-          }).end()
-          options = {
-            'method': 'GET',
-            'hostname': 'demo2.otprivacy.com',
-            'path': '/api/reporting/v1/dashboard/widget/5ea77f83572a55000ca10f17',
-            'headers': {
-              'Authorization': 'Bearer '+ bear, 
-              'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
-            },
-            'maxRedirects': 20
-            }
-            https.request(options, function (res) {
-            var chunks = [];
+    //         res.on("error", function (error) {
+    //           console.error(error);
+    //         });
+    //       }).end()
+    //       options = {
+    //         'method': 'GET',
+    //         'hostname': 'demo2.otprivacy.com',
+    //         'path': '/api/reporting/v1/dashboard/widget/5ea77f83572a55000ca10f17',
+    //         'headers': {
+    //           'Authorization': 'Bearer '+ bear, 
+    //           'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
+    //         },
+    //         'maxRedirects': 20
+    //         }
+    //         https.request(options, function (res) {
+    //         var chunks = [];
         
-            res.on("data", function (chunk) {
-            chunks.push(chunk);
-            });
+    //         res.on("data", function (chunk) {
+    //         chunks.push(chunk);
+    //         });
         
-            res.on("end", function (chunk) {
-            var body = Buffer.concat(chunks);
-            charts.data[0] = body;
-            });
+    //         res.on("end", function (chunk) {
+    //         var body = Buffer.concat(chunks);
+    //         charts.data[0] = body;
+    //         });
         
-            res.on("error", function (error) {
-            console.error(error);
-            });
-        }).end()
-        options = {
-            'method': 'GET',
-            'hostname': 'demo2.otprivacy.com',
-            'path': '/api/reporting/v1/dashboard/widget/5ea92e0cafd5c8000d398382',
-            'headers': {
-              'Authorization': 'Bearer '+ bear, 
-              'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
-            },
-            'maxRedirects': 20
-            }
-            https.request(options, function (res) {
-            var chunks = [];
+    //         res.on("error", function (error) {
+    //         console.error(error);
+    //         });
+    //     }).end()
+    //     options = {
+    //         'method': 'GET',
+    //         'hostname': 'demo2.otprivacy.com',
+    //         'path': '/api/reporting/v1/dashboard/widget/5ea92e0cafd5c8000d398382',
+    //         'headers': {
+    //           'Authorization': 'Bearer '+ bear, 
+    //           'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
+    //         },
+    //         'maxRedirects': 20
+    //         }
+    //         https.request(options, function (res) {
+    //         var chunks = [];
         
-            res.on("data", function (chunk) {
-            chunks.push(chunk);
-            });
+    //         res.on("data", function (chunk) {
+    //         chunks.push(chunk);
+    //         });
         
-            res.on("end", function (chunk) {
-            var body = Buffer.concat(chunks);
-            charts.data[1] = body;
-            // console.log(body.toString());
-            });
+    //         res.on("end", function (chunk) {
+    //         var body = Buffer.concat(chunks);
+    //         charts.data[1] = body;
+    //         // console.log(body.toString());
+    //         });
         
-            res.on("error", function (error) {
-            console.error(error);
-            });
-        }).end()
-
-        }
-          
-
-          
-            
-        }, 3000);  
+    //         res.on("error", function (error) {
+    //         console.error(error);
+    //         });
+    //     }).end()
+    //     }         
+    //     }, 3000);  
 });
