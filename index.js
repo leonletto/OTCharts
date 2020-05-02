@@ -112,18 +112,6 @@ app.get('/*', async(req,res) => {
   res.sendFile('index.html',{root: path.join(__dirname, '/src/dist')});
 });
 
-// app.get('/login/*', async(req,res) => {
-//   res.sendFile('login.html',{root: path.join(__dirname, '/src/dist/login')});
-// });
-
-// app.get('/logout/*', async(req,res) => {
-//   res.sendFile('logout.html',{root: path.join(__dirname, '/src/dist/logout')});
-// });
-
-// app.get('/function-file/*', async(req,res) => {
-//   res.sendFile('function-file.html',{root: path.join(__dirname, '/src/dist/function-file')});
-// });
-
 app.listen(port, () => {
     console.log('Listening on port '+ port);  
 });
