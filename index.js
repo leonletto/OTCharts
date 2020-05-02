@@ -74,7 +74,7 @@ app.post('/api/reporting/v1/dashboard/widget/bear', async(req,res)=>{
 
 app.get('/api/reporting/v1/dashboard/widget/:id', async(req, res0) => {
     route = req.params.id;
-    // const {bear} = req.header.Authorization; //final auth
+    // const {bear} = req.header.Authorization; //final auth is going to use this
     if(bear.length > 10)
     {   
         let options = {
