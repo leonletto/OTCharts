@@ -20,35 +20,35 @@ app.post('/api/reporting/v1/dashboard/widget/bear', async(req,res)=>{
     } else{
       bear = bearer;
       res.status(200).send("Ok");
-    }   
+    }
   });
-  
+
 app.get('/api/reporting/v1/dashboard/widget/:id', async(req, res0) => {
     route = req.params.id;
     if(bear.length > 10)
-    {   
+    {
       let options = {
         'method': 'GET',
         'hostname': 'demo1.otprivacy.com',
         'path': '/api/reporting/v1/dashboard/widget/'+route,
         'headers': {
-          'Authorization': 'Bearer '+ bear, 
+          'Authorization': 'Bearer '+ bear,
           'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
         },
         'maxRedirects': 20
     }
     https.request(options, function (res) {
     var chunks = [];
-  
+
     res.on("data", function (chunk) {
       chunks.push(chunk);
     });
-  
+
     res.on("end", function (chunk) {
       var body = Buffer.concat(chunks);
       res0.send(body);
     });
-  
+
     res.on("error", function (error) {
       console.error(error);
     });
@@ -58,5 +58,5 @@ app.get('/api/reporting/v1/dashboard/widget/:id', async(req, res0) => {
 
 
 app.listen(port, () => {
-    console.log('Listening on port '+ port);  
+    console.log('Listening on http://localhost:'+ port+'/');
 });
