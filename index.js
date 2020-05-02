@@ -4,6 +4,7 @@ const https = require('follow-redirects').https;
 const bodyParser = require('body-parser');
 const charts = require('./src/models/Charts.js');
 var path = require('path');
+var qs = require('querystring');
 
 const app = express();
 app.use(bodyParser.json());
@@ -28,14 +29,13 @@ app.post('/api/reporting/v1/dashboard/widget/bear', async(req,res)=>{
     const {username,password,domain} = req.body;
     if(!username |  !password | !domain ){
         res.status(422).send({error:'You must provide a username, password, and domain.'});
-    } else
-    {
+    } else {
       var options = {
         'method': 'POST',
         'hostname': domain + '.otprivacy.com',
         'path': '/api/access/v1/oauth/token',
         'headers': {
-          'Content-Type': ['application/json', 'application/x-www-form-urlencoded'],
+          'Content-Type': 'application/x-www-form-urlencoded',
           'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
         },
         'maxRedirects': 20
@@ -50,7 +50,7 @@ app.post('/api/reporting/v1/dashboard/widget/bear', async(req,res)=>{
         res.on("end", function (chunk) {
           var body = Buffer.concat(chunks);
           res0.send(body);
-          // console.log(body.toString());
+          console.log(body.toString());
         });
       
         res.on("error", function (error) {
@@ -62,11 +62,10 @@ app.post('/api/reporting/v1/dashboard/widget/bear', async(req,res)=>{
       var postData = qs.stringify({
         'grant_type': 'password',
         'scope': 'read',
-        'username': 'otaddin.zd@mail.com',
-        'password': 'OT.MSOffice365.Addin',
+        'username': username,
+        'password': password,
         'client_id': 'onetrust'
       });
-      
       req2.write(postData);  
       req2.end();    
     }   
