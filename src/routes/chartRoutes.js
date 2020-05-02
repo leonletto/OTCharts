@@ -15,8 +15,8 @@ const router = express.Router();
 //   res.send(charts.data[2]);
 // });
 
- router.get('/',async(req,res) => {
-   res.send('<html><head></head><body>Hello OneTrust!</body></html>');
- });
+//  router.get('/',async(req,res) => {
+//    res.send('<html><head></head><body>Hello OneTrust!</body></html>');
+//  });
 
 module.exports = router;
