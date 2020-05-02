@@ -3,6 +3,7 @@ const chartRoutes = require('./src/routes/chartRoutes');
 const https = require('follow-redirects').https;
 const bodyParser = require('body-parser');
 const charts = require('./src/models/Charts.js');
+var path = require('path');
 
 const app = express();
 app.use(bodyParser.json());
