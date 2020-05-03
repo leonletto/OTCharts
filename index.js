@@ -13,14 +13,14 @@ const qs = require('querystring');
 
 
 const app = express();
-app.use(expressWinston.logger({
-  transports: [
-    new winston.transports.Console({
-      json: true,
-      colorize: true
-    })
-  ]
-}));
+// app.use(expressWinston.logger({
+//   transports: [
+//     new winston.transports.Console({
+//       json: true,
+//       colorize: true
+//     })
+//   ]
+// }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(chartRoutes);
@@ -119,6 +119,7 @@ app.use(serveStatic(path.join(__dirname, 'src/pages/app'), {'index': ['index.htm
 //   res.sendFile('index.html', {root: path.join(__dirname, 'src/pages')});
 // });
 // https://otcharts.azurewebsites.net/
+// logging url to get logs in zip https://otcharts.scm.azurewebsites.net/api/logs/docker/zip
 app.use(expressWinston.errorLogger({
   transports: [
     new winston.transports.Console({
