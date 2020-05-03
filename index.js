@@ -20,7 +20,7 @@ app.post('/api/access/v1/oauth/token', async(req,res0)=>{
   } else {
     var options = {
       'method': 'POST',
-      'hostname': domain + '.otprivacy.com',
+      'hostname': domain,
       'path': '/api/access/v1/oauth/token',
       'headers': {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -70,7 +70,7 @@ app.get('/api/reporting/v1/dashboard/widget/:domain/:id', async(req, res0) => {
   
     let options = {
       'method': 'GET',
-      'hostname': domain+'.otprivacy.com',
+      'hostname': domain,
       'path': '/api/reporting/v1/dashboard/widget/'+route,
       'headers': {
         'Authorization': authorization, 
@@ -97,18 +97,11 @@ app.get('/api/reporting/v1/dashboard/widget/:domain/:id', async(req, res0) => {
 
  });
 
-// app.use("/app", express.static(path.join(__dirname, '/src/dist')));
-
-// app.get('/app/*', async(req,res) => {
-//   res.sendFile('index.html',{root: path.join(__dirname, '/src/dist')});
-// });
-
 app.use("/" ,express.static(path.join(__dirname, '/src/pages')));
 
 app.get('/*', async(req,res) => {
   res.sendFile('index.html',{root: path.join(__dirname, '/src/pages')});
 });
-
 
 app.listen(port, () => {
     console.log('Listening on http://localhost:'+ port+'/');
