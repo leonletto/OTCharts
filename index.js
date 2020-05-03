@@ -103,6 +103,10 @@ app.get('/app/*', async(req,res) => {
   res.sendFile('index.html',{root: path.join(__dirname, '/src/dist')});
 });
 
+app.get('/*', async(req,res) => {
+  res.sendFile('index.html',{root: path.join(__dirname, '/src/dist/pages')});
+});
+
 app.listen(port, () => {
     console.log('Listening on http://localhost:'+ port+'/');
 });
