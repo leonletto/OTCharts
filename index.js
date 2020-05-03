@@ -99,7 +99,7 @@ app.get('/api/reporting/v1/dashboard/widget/:domain/:id', async(req, res0) => {
 
 app.use(express.static(path.join(__dirname, '/src/dist')));
 
-app.get('/*', async(req,res) => {
+app.get('/app/*', async(req,res) => {
   res.sendFile('index.html',{root: path.join(__dirname, '/src/dist')});
 });
 
