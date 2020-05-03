@@ -97,15 +97,18 @@ app.get('/api/reporting/v1/dashboard/widget/:domain/:id', async(req, res0) => {
 
  });
 
-app.use(express.static(path.join(__dirname, '/src/dist')));
+// app.use("/app", express.static(path.join(__dirname, '/src/dist')));
 
-app.get('/app/*', async(req,res) => {
-  res.sendFile('index.html',{root: path.join(__dirname, '/src/dist')});
-});
+// app.get('/app/*', async(req,res) => {
+//   res.sendFile('index.html',{root: path.join(__dirname, '/src/dist')});
+// });
+
+app.use("/" ,express.static(path.join(__dirname, '/src/pages')));
 
 app.get('/*', async(req,res) => {
-  res.sendFile('index.html',{root: path.join(__dirname, '/src/dist/pages')});
+  res.sendFile('index.html',{root: path.join(__dirname, '/src/pages')});
 });
+
 
 app.listen(port, () => {
     console.log('Listening on http://localhost:'+ port+'/');
