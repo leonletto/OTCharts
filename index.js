@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded( { extended: true }));
 app.use(chartRoutes);
 
 const port = process.env.PORT || 1337;
-  
+ 
 app.post('/api/access/v1/oauth/token', async(req,res0)=>{
   const {username,password,domain} = req.body;
   if(!username |  !password | !domain ){
@@ -80,16 +80,16 @@ app.get('/api/reporting/v1/dashboard/widget/:domain/:id', async(req, res0) => {
     }
     https.request(options, function (res) {
     var chunks = [];
-  
+
     res.on("data", function (chunk) {
       chunks.push(chunk);
     });
-  
+
     res.on("end", function (chunk) {
       var body = Buffer.concat(chunks);
       res0.send(body);
     });
-  
+
     res.on("error", function (error) {
       console.error(error);
     });
@@ -104,5 +104,5 @@ app.get('/app/*', async(req,res) => {
 });
 
 app.listen(port, () => {
-    console.log('Listening on port '+ port);  
+    console.log('Listening on http://localhost:'+ port+'/');
 });
