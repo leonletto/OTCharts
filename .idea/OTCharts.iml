@@ -8,5 +8,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="react-dom" level="application" />
+    <orderEntry type="library" name="react" level="application" />
+    <orderEntry type="library" name="babel-core" level="application" />
+    <orderEntry type="library" name="twitter-bootstrap" level="application" />
+    <orderEntry type="library" name="popper.js" level="application" />
+    <orderEntry type="library" name="jquery-3.5.0.slim" level="application" />
+    <orderEntry type="library" name="react-router-dom" level="application" />
+    <orderEntry type="library" name="babel-standalone" level="application" />
+    <orderEntry type="library" name="react-router" level="application" />
+    <orderEntry type="library" name="vue" level="application" />
   </component>
 </module>
