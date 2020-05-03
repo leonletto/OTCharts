@@ -1,13 +1,26 @@
 const express = require('express');
 const serveStatic = require('serve-static')
+const expressWinston = require('express-winston');
+const winston = require('winston');
+const {createLogger} = require('winston');
 const chartRoutes = require('./src/routes/chartRoutes');
 const https = require('follow-redirects').https;
 const bodyParser = require('body-parser');
 const charts = require('./src/models/Charts.js');
-var path = require('path');
-var qs = require('querystring');
+const path = require('path');
+const qs = require('querystring');
+// logging properly
+
 
 const app = express();
+app.use(expressWinston.logger({
+  transports: [
+    new winston.transports.Console({
+      json: true,
+      colorize: true
+    })
+  ]
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(chartRoutes);
@@ -105,7 +118,17 @@ app.use(serveStatic(path.join(__dirname, 'src/pages/app'), {'index': ['index.htm
 // app.get('/*', async (req, res) => {
 //   res.sendFile('index.html', {root: path.join(__dirname, 'src/pages')});
 // });
+// https://otcharts.azurewebsites.net/
+app.use(expressWinston.errorLogger({
+  transports: [
+    new winston.transports.Console({
+      json: true,
+      colorize: true
+    })
+  ]
+}));
 
 app.listen(port, () => {
   console.log('Listening on http://localhost:' + port + '/');
+
 });
