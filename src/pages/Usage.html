@@ -53,35 +53,68 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="padding-bottom: unset">
         <div class="container">
-            <h1 class="display-4" style="padding-top: 20px">OneTrust Office Add-in (Beta)</h1>
-            <h5>This is the documentation page for the OneTrust Office Add-in. This Add-In allows you to import the
-                charts from our dashboards</h5>
-            <p>Here you will find links to Installation Documentation for the three platforms supported - Excel for iOS,
-                MacOS and Windows</p>
+            <h2 class="display-4" style="padding-top: 20px">OneTrust Office Add-in for Excel (Beta)</h2>
+            <h4>Usage</h4>
+            <p>The OneTrust Office Add-in for Excel allows you to take the id for any Chart in your OneTrust Dashboard
+                and import that Chart into Excel. This is a live chart which you can update at any time and even copy
+                into a Word document and maintain the connection to the live data in your Dashboard.</p>
+            <p>Below you will find the step by step istructions to import your first graph from your OneTrust dashboard
+                into Excel.</p>
             <br>
         </div>
     </div>
 
     <div class="container">
         <!-- Example row of columns -->
-        <div class="row">
-            <div class="col-md-4">
-                <h2>MacOs Install Guide</h2>
-                <p>Documentation for installing the Office AddOn for Excel on MacOS</p>
-                <p><a class="btn btn-secondary" href="./MacOs.html" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Windows Install Guide</h2>
-                <p>Documentation for installing the Office AddOn for Excel on Windows</p>
-                <p><a class="btn btn-secondary" href="./Windows.html" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>iOS Install Guide</h2>
-                <p>Documentation for installing the Office AddOn for Excel on iOS</p>
-                <p><a class="btn btn-secondary" href="./ios.html" role="button">View details &raquo;</a></p>
-            </div>
-        </div>
-
+        <h2>Go to your dashboard and select a chart to import</h2>
+        <ul>
+            <li>
+                <p>Sign in to OneTrust</p>
+                <img alt="Sign in to OneTrust" src="./images/OtPrivacyFrontPage.png" Width="500">
+            </li>
+            <li>
+                <p>Open your Dashboards pane and select a dashboard</p>
+                <img alt="Go to Dashboards" src="./images/ClickOnDashBoards.png" width="500">
+            </li>
+            <li>
+                <p>Choose a Chart and click on the title</p>
+                <img alt="Click on the title" src="./images/ClickOnTitleOfChart.png" width="500">
+            </li>
+            <li>
+                <p>Finally click on the long alphanumeric code after the last slash in the url and copy this.</p>
+                <img alt="Copy the Chart Number" src="./images/CopyChartNumberFromURL.png" width="500">
+            </li>
+            <li>
+                <p>In Excel, choose Insert > Add-ins > My Add-ins (drop-down menu), and then choose your add-in.</p>
+                <img src="images/InsertOTAddin.png" alt="Insert OTAddin" height="200">
+            </li>
+            <li>
+                <p>Once your add-in is displayed in Excel, click on the OneTrust icon to open the AddIn.</p>
+                <img src="images/VerifyOTAddin.png" alt="OpenOTAddin" width="500">
+            </li>
+            <li>
+                <p>Next you will enter your username and password that you use at onetrust ( for the BETA, create a
+                    local accout which has access to your dashboards). We have automatically selected Demo1 as your site
+                    to use but this will eventually be automatically be chosen based on the e-mail address of the user
+                    logging in.</p>
+                <img src="images/LoginToOTAddin.png" alt="Login to OTAddin" height="200">
+            </li>
+            <li>
+                <p>Once you have logged in, paste in the alphanumeric that you copied from the URL bar in your Dashboard
+                    adn click Get Chart Number</p>
+                <img src="images/PasteInChartNumber.png" alt="Paste Chart Number" height="200">
+            </li>
+            <li>
+                <p>Now you get your Chart in Excel. </p>
+                <img id="gif-2" src="images/ImportChartToExcelFinalFrame.gif"
+                     onmouseover="document.getElementById('gif-2').src='images/ImportChartToExcel.gif'"
+                     onmouseout="document.getElementById('gif-2').src='images/ImportChartToExcelFinalFrame.gif'"
+                /></p>
+            </li>
+            <li>
+                <h4>Watch here for more information on what you can do with the Charts!</h4>
+            </li>
+        </ul>
         <hr>
 
     </div> <!-- /container -->
