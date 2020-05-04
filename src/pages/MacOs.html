@@ -41,7 +41,7 @@
                     <a class="dropdown-item active" href="./MacOs.html">MacOs</a>
                     <a class="dropdown-item" href="./Windows.html">Windows</a>
                     <a class="dropdown-item" href="./ios.html">iOS</a>
-                    <a class="dropdown-item" href="./OfficeOnline.html">Office Online</a>
+                    <a class="dropdown-item" href="ExcelOnline.html">Excel Online</a>
                 </div>
             </li>
         </ul>
@@ -50,39 +50,37 @@
 
 
 <main role="main">
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="padding-bottom: unset">
         <div class="container">
-            <h2 class="display-4" style="padding-top: 20px">OneTrust Office Add-in for Excel on MacOs (Beta)</h2>
+            <h2 class="display-4" style="padding-top: 20px">OneTrust MacOs Excel Add-In (Beta)</h2>
             <h4>Installation</h4>
-            <p>This is the installation documentation page for the OneTrust Office Add-in. This Add-In allows you to
-                import the
-                charts from our dashboards</p>
+            <p>This is the installation documentation page for the OneTrust MacOs Excel Add-In.</p>
             <br>
         </div>
     </div>
 
     <div class="container">
-        <!-- Example row of columns -->
-        <h2>Sideload an add-in in Excel on Mac</h2>
         <ul>
             <li>
-                <p>Open Terminal and go to the following folder where you'll save your add-in's manifest file. If the
-                    wef folder doesn't exist on your computer, create it.</p>
-                <code>/Users/YourUserName/Library/Containers/com.microsoft.Excel/Data/Documents/wef</code>
+                <p>Download the xml file for the Add-In <a href="images/manifest.xml" download>here.</a></p>
             </li>
             <li>
-                <p>Open the folder in Finder using the command open . (including the period or dot). Copy your add-in's
+                <p>Open Terminal and go to the following folder where you'll save your add-in's manifest.xml file. If
+                    the
+                    wef folder doesn't exist on your computer, create it.</p>
+                <p>cd /Users/YourUserName/Library/Containers/com.microsoft.Excel/Data/Documents/wef</p>
+            </li>
+            <li>
+                <p>Open the folder in Finder using the command "open ." (including the dot). Copy your add-in's
                     manifest file to this folder.</p>
-                <img alt="Your Excel Folder" src="./images/wef-folder.png">
+                <img alt="Your Excel Folder" width="500 " src="./images/wef-folder.png">
             </li>
             <li>
                 <p>Open Excel, and then open a Spreadsheet. Restart Excel if it's already running.</p>
             </li>
             <li>
                 <p>In Excel, choose Insert > Add-ins > My Add-ins (drop-down menu), and then choose your add-in.</p>
-                <img src="images/InsertOTAddin.png" alt="Insert OTAddin" height="200">
+                <img src="images/InsertOTAddin2.png" alt="Insert OTAddin" height="200">
                 <blockquote>
                     [!IMPORTANT] Sideloaded add-ins will not show up in the My Add-ins dialog box. They are only visible
                     within the drop-down menu (small down-arrow to the right of My Add-ins on the Insert tab).
@@ -90,7 +88,7 @@
                 </blockquote>
             </li>
             <li>
-                <p>Verify that your add-in is displayed in Word.</p>
+                <p>Verify that your add-in is displayed in Excel.</p>
                 <img src="images/VerifyOTAddin.png" alt="Verify OTAddin" width="500">
             </li>
         </ul>
