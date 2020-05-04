@@ -53,40 +53,46 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="padding-bottom: unset">
         <div class="container">
-            <h1 class="display-4">OneTrust Office Add-in (Beta)</h1>
-            <h5>This is the documentation page for the OneTrust Office Add-in. This Add-In allows you to import the
-                charts from our dashboards</h5>
-            <p>Here you will find links to Installation Documentation for the three platforms supported - Excel for iOS,
-                MacOS and Windows</p>
+            <h2 class="display-4" style="padding-top: 20px">OneTrust Office Add-in for Excel Online (Beta)</h2>
+            <h4>Installation</h4>
             <br>
         </div>
     </div>
 
     <div class="container">
         <!-- Example row of columns -->
-        <div class="row">
-            <div class="col-md-4">
-                <h2>MacOs Install Guide</h2>
-                <p>Documentation for installing the Office AddOn for Excel on MacOS</p>
-                <p><a class="btn btn-secondary" href="./MacOs.html" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Windows Install Guide</h2>
-                <p>Documentation for installing the Office AddOn for Excel on Windows</p>
-                <p><a class="btn btn-secondary" href="./Windows.html" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>iOS Install Guide</h2>
-                <p>Documentation for installing the Office AddOn for Excel on iOS</p>
-                <p><a class="btn btn-secondary" href="./ios.html" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Office Online Install Guide</h2>
-                <p>Documentation for installing the Office AddOn for Excel Online</p>
-                <p><a class="btn btn-secondary" href="./OfficeOnline.html" role="button">View details &raquo;</a></p>
-            </div>
-        </div>
-
+        <h2>Sideload an add-in in Excel Online</h2>
+        <ul>
+            <li>
+                <p>Open <a href="https://office.live.com/" rel="nofollow">Microsoft Office on the web</a>.</p>
+            </li>
+            <li>
+                <p>In Get started with the online apps now, choose Excel and then open a new document.</p>
+            </li>
+            <li>
+                <p>Open the Insert tab on the ribbon and, in the Add-ins section, choose Office Add-ins.</p>
+            </li>
+            <li>
+                <p>In Excel, On the Office Add-ins dialog, select the MY ADD-INS tab, choose Manage My Add-ins, and then
+                    Upload My Add-in.</p>
+                <img src="images/office-add-ins-insert-addin.png" alt="Insert OTAddin" height="500">
+            </li>
+            <li>
+                <p>Browse to the add-in manifest file, and then select Upload.</p>
+                <img src="images/upload-add-in.png" alt="Verify OTAddin" width="500">
+            </li>
+            <li>
+                <p>Verify that your add-in is installed. For example, if it is an add-in command, it should appear on
+                    either the ribbon or the context menu. </p>
+                <img src="images/upload-add-in.png" alt="Verify OTAddin" width="500">
+            </li>
+        </ul>
+        <h5>Remove a sideloaded add-in</h5>
+        <p>You can remove a previously sideloaded add-in by clearing the Office cache on your computer. Details on how
+            to clear the cache for each platform and host can be found in the article <a
+                    href="https://github.com/OfficeDev/office-js-docs-pr/blob/master/docs/testing/clear-cache.md">Clear
+                the Office cache</a>.</p>
+        <hr>
 
     </div> <!-- /container -->
 
