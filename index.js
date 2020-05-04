@@ -73,10 +73,9 @@ app.post('/api/access/v1/oauth/token', async (req, res0) => {
   }
 });
 
-app.get('/api/reporting/v1/dashboard/widget/:domain/:id', async (req, res0) => {
+app.get('/api/reporting/v1/dashboard/widget/:id', async (req, res0) => {
   route = req.params.id;
-  domain = req.params.domain;
-  const {authorization} = req.headers;
+  const {authorization, domain} = req.headers;
   if (!authorization) {
     return res0.status(401).send({error: 'You are not authorized!'});
   }
