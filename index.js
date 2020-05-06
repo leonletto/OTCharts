@@ -34,6 +34,12 @@ app.post('/api/access/v1/oauth/token', async (req, res0) => {
     };
     var req2 = https.request(options, function (res) {
       var chunks = [];
+      var ip = (req.headers['x-forwarded-for'] || '').split(',').pop().trim() ||
+        req.connection.remoteAddress ||
+        req.socket.remoteAddress ||
+        req.connection.socket.remoteAddress
+
+      console.log(ip + ' ' + options.hostname + options.path);
 
       res.on("data", function (chunk) {
         chunks.push(chunk);
