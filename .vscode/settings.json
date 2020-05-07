@@ -4,5 +4,5 @@
         "node_modules{,/**}",
         ".vscode{,/**}"
     ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/03fb28c2-cca0-4c3c-9983-47f7adb97d9f/resourceGroups/ZaraDana/providers/Microsoft.Web/sites/OTCharts"
+    "appService.defaultWebAppToDeploy": "/subscriptions/2b21aade-f932-451b-b071-f212113009ea/resourceGroups/otprivacy/providers/Microsoft.Web/sites/otchart"
 }
