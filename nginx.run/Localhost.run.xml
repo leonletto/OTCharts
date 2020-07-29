@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Localhost" type="nginx.configuration.type" factoryName="nginx server">
+    <option name="serverDescriptorId" value="nginx.descriptor.1595901908617" />
+    <option name="showHttpLog" value="true" />
+    <option name="showErrorLog" value="true" />
+    <option name="httpLogPath" value="/usr/local/var/log/nginx/access.log" />
+    <option name="errorLogPath" value="/usr/local/var/log/nginx/error.log" />
+    <method v="2" />
+  </configuration>
+</component>

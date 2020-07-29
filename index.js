@@ -1,5 +1,5 @@
 const express = require('express');
-const serveStatic = require('serve-static')
+const serveStatic = require('serve-static');
 const chartRoutes = require('./src/routes/chartRoutes');
 const https = require('follow-redirects').https;
 const bodyParser = require('body-parser');
@@ -20,7 +20,7 @@ const port = process.env.PORT || 1337;
 app.post('/api/access/v1/oauth/token', async (req, res0) => {
   const {username, password, domain} = req.body;
   if (!username || !password || !domain) {
-    res.status(422).send({error: 'You must provide a username, password, and domain.'});
+    res0.status(422).send({error: 'You must provide a username, password, and domain.'});
   } else {
     var options = {
       'method': 'POST',
@@ -34,24 +34,24 @@ app.post('/api/access/v1/oauth/token', async (req, res0) => {
     };
     var req2 = https.request(options, function (res) {
       var chunks = [];
-      var ip = (req.headers['x-forwarded-for'] || '').split(',').pop().trim() ||
-        req.connection.remoteAddress ||
-        req.socket.remoteAddress ||
-        req.connection.socket.remoteAddress
+      // var ip = (req.headers['x-forwarded-for'] || '').split(',').pop().trim() ||
+      //   req.connection.remoteAddress ||
+      //   req.socket.remoteAddress ||
+      //   req.connection.socket.remoteAddress;
+      //
+      // console.log(ip + ' ' + options.hostname + options.path);
 
-      console.log(ip + ' ' + options.hostname + options.path);
-
-      res.on("data", function (chunk) {
-        chunks.push(chunk);
+      res.on('data', async function (chunk) {
+        await chunks.push(chunk);
       });
 
-      res.on("end", function () {
-        var body = Buffer.concat(chunks);
-        res0.send(body);
-        console.log(body.toString());
+      res.on('end', async function () {
+        var body = await Buffer.concat(chunks);
+        res0.send(await body);
+
       });
 
-      res.on("error", function (error) {
+      res.on('error', function (error) {
         console.error(error);
         res0.send(error);
       });
@@ -70,7 +70,7 @@ app.post('/api/access/v1/oauth/token', async (req, res0) => {
 });
 
 app.get('/api/reporting/v1/dashboard/widget/:id', async (req, res0) => {
-  route = req.params.id;
+  let route = req.params.id;
   const {authorization, domain} = req.headers;
   if (!authorization) {
     return res0.status(401).send({error: 'You are not authorized!'});
@@ -85,34 +85,34 @@ app.get('/api/reporting/v1/dashboard/widget/:id', async (req, res0) => {
       'Cookie': '__cfduid=deed201afd27e50d8dc45ea9a40b913f91587694655'
     },
     'maxRedirects': 20
-  }
+  };
   https.request(options, function (res) {
-    var chunks = [];
-    var ip = (req.headers['x-forwarded-for'] || '').split(',').pop().trim() ||
-      req.connection.remoteAddress ||
-      req.socket.remoteAddress ||
-      req.connection.socket.remoteAddress
+    const chunks = [];
+    // var ip = (req.headers['x-forwarded-for'] || '').split(',').pop().trim() ||
+    //   req.connection.remoteAddress ||
+    //   req.socket.remoteAddress ||
+    //   req.connection.socket.remoteAddress
+    //
+    // console.log(ip + ' ' + options.hostname + options.path);
 
-    console.log(ip + ' ' + options.hostname + options.path);
-
-    res.on("data", function (chunk) {
+    res.on('data', function (chunk) {
       chunks.push(chunk);
     });
 
-    res.on("end", function () {
-      var body = Buffer.concat(chunks);
+    res.on('end', function () {
+      let body = Buffer.concat(chunks);
       res0.send(body);
     });
 
-    res.on("error", function (error) {
+    res.on('error', function (error) {
       console.error(error);
     });
   }).end();
 
 });
 
-app.use(serveStatic(path.join(__dirname, 'src/pages'), {'index': ['index.html']}))
-app.use(serveStatic(path.join(__dirname, 'src/pages/app'), {'index': ['index.html']}))
+app.use(serveStatic(path.join(__dirname, 'src/pages'), {'index': ['index.html']}));
+app.use(serveStatic(path.join(__dirname, 'src/pages/app'), {'index': ['index.html']}));
 
 // app.use("/", express.static(path.join(__dirname, 'src/pages')));
 //
